@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-from openai import OpenAI
 import os
 from ydata_profiling import ProfileReport
 
@@ -27,7 +26,6 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
 def analyze_file(dataframe, output_path):
     """
